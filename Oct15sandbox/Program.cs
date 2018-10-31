@@ -48,7 +48,38 @@ namespace Oct15sandbox
             Console.WriteLine("Select a product that you would like to delete: ");
 
         }
-
-        
     }
 }
+
+
+
+
+ProductRepository repo = new ProductRepository();
+
+string response = Colsole.ReadLine();
+
+while (response != "5")
+    {
+    Console.WriteLine("Please choose one of the following:");
+    Console.WriteLine("1) View Products");
+    Console.WriteLine("2) Update a Product");
+    Console.WriteLine("3) Create a Product");
+    Console.WriteLine("4) Delete a Product");
+    Console.WriteLine("5) Exit");   
+    
+    response = Console.ReadLine();
+    
+    switch (response)
+            {
+                case "1":
+                    List<Products> products = repo.GetAllProducts();
+
+                foreach(Products product in products)
+                {
+                Console.WriteLine(product.ID + " | " + product.Name + " | " + product.Price);
+                }
+                break;
+
+            
+                    
+

@@ -123,7 +123,6 @@ namespace Oct15sandbox
                 cmd.Parameters.AddWithValue("cID", prod.CategoryID);
                 cmd.ExecuteNonQuery();
             }
-
         }
 
         public void UpdateProduct(Products prod)
